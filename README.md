@@ -15,7 +15,7 @@
 To get started with ChainCred, clone the repository:
 
 bash
-git clone https://github.com/yourusername/chaincred.git
+git clone https://collegecanvas.github.io/ChainCred/
 cd chaincred
 Dependencies
 Make sure you have the following installed:
