@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NFT Tailwind Template</title>
+<link rel="icon" href="favicon.ico"><link href="wallet.css" rel="stylesheet"></head>
+<body class="be" x-data="
+      {
+        scrolledFromTop: false
+      }
+    " x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false" @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false">
+
+<header x-data="
+        {
+          navbarOpen: false,
+          submenuOpen: false
+        }
+      " class="header g h za pb yc ce gi d" :class="scrolledFromTop ? 'y de re bi fi' : ' y' ">
+<div class="a">
+<div class="f aa za yc ad">
+<div class="qb bc nf">
+<a href="/index.html" class="header-logo xa pb" :class="scrolledFromTop ? 'of hl' : 'pf il' ">
+<img src="ChainCred logo.png" alt="logo" class="bb bc" />
+</a>
+</div>
+<div class="za pb yc ad nf">
+<div>
+<button @click="navbarOpen = !navbarOpen " :class="navbarOpen && 'navbarTogglerActive' " id="navbarToggler" name="navbarToggler" aria-label="navbarToggler" class="e i j/2 xa nc kd qf rf ei hj yk">
+<span :class="navbarOpen && 'rc pc k' " class="f ba xa cb rb ee"></span>
+<span :class="navbarOpen && '_h' " class="f ba xa cb rb ee"></span>
+<span :class="navbarOpen && 'l qc' " class="f ba xa cb rb ee"></span>
+</button>
+<nav :class="!navbarOpen && 'ab' " id="navbarCollapse" class="e i m pb cc kd fe ci ok vk zk dl fl sf jl kl xl jm">
+<ul class="rm wk">
+<li class="ij f">
+<a href="/index.html" class="ca za tf eh nh th lj rk xk ll ml">
+Home
+</a>
+</li>
+<li class="ij f">
+<a href="explore-items.html" class="ca za tf eh nh th lj rk sk xk ll ml cm">
+Explore
+</a>
+</li>
+<li class="ij f">
+<a href="https://discord.com/invite/SxNNgXBAQS" target="_blank" rel="nofollow" class="ca za tf eh nh th lj rk sk xk ll ml cm">
+Community
+</a>
+</li>
+<li class="ij submenu-item f">
+<a href="javascript:void(0)" @click="submenuOpen = !submenuOpen" class="f ca za tf eh nh th li mi ni/2 oi pi qi ri si ti ui vi lj rk sk xk ll ol pl zl cm">
+Pages
+</a>
+<div :class="submenuOpen ? 'xa' : 'ab' " class="submenu f m h sb ld de cf hi ji nj nk pk qk vk wl yl _l am">
+<a href="explore-items.html" class="xa md uf nf fh oh th bj">
+Explore Items
+</a>
+<a href="item-details.html" class="xa md uf nf fh oh th bj">
+Item Details
+</a>
+<a href="create-item.html" class="xa md uf nf fh oh th bj">
+Create Item
+</a>
+<a href="connect-wallet.html" class="xa md uf nf fh oh th bj">
+Connect Wallet
+</a>
+<a href="support.html" class="xa md uf nf fh oh th bj">
+Support
+</a>
+<a href="signin.html" class="xa md uf nf fh oh th bj">
+Sign In Page
+</a>
+<a href="signup.html" class="xa md uf nf fh oh th bj">
+Sign Up Page
+</a>
+</div>
+</li>
+<li class="ij f">
+<a href="support.html" class="ca za tf eh nh th lj rk sk xk ll ml cm">
+Support
+</a>
+</li>
+</ul>
+</nav>
+</div>
+<div class="ab zc hg qj ql">
+<div class="ij f ab gk">
+<button class="sf vf eh nh uh gi cj kl km" name="search" aria-label="search">
+<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.2917 3.25C12.1592 3.25 13.9503 3.99189 15.2709 5.31246C16.5914 6.63303 17.3333 8.4241 17.3333 10.2917C17.3333 12.0358 16.6942 13.6392 15.6433 14.8742L15.9358 15.1667H16.7917L22.2083 20.5833L20.5833 22.2083L15.1667 16.7917V15.9358L14.8742 15.6433C13.6392 16.6942 12.0358 17.3333 10.2917 17.3333C8.4241 17.3333 6.63303 16.5914 5.31246 15.2709C3.99189 13.9503 3.25 12.1592 3.25 10.2917C3.25 8.4241 3.99189 6.63303 5.31246 5.31246C6.63303 3.99189 8.4241 3.25 10.2917 3.25ZM10.2917 5.41667C7.58333 5.41667 5.41667 7.58333 5.41667 10.2917C5.41667 13 7.58333 15.1667 10.2917 15.1667C13 15.1667 15.1667 13 15.1667 10.2917C15.1667 7.58333 13 5.41667 10.2917 5.41667Z" fill="currentColor" />
+</svg>
+</button>
+<div class="c e n o sb ld de df _h ii jj kj nj">
+<form class="za">
+<input type="text" placeholder="Search here..." class="pb ce tf nf vh di" />
+<button class="vh" name="search-button" aria-label="search-button">
+<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.2917 3.25C12.1592 3.25 13.9503 3.99189 15.2709 5.31246C16.5914 6.63303 17.3333 8.4241 17.3333 10.2917C17.3333 12.0358 16.6942 13.6392 15.6433 14.8742L15.9358 15.1667H16.7917L22.2083 20.5833L20.5833 22.2083L15.1667 16.7917V15.9358L14.8742 15.6433C13.6392 16.6942 12.0358 17.3333 10.2917 17.3333C8.4241 17.3333 6.63303 16.5914 5.31246 15.2709C3.99189 13.9503 3.25 12.1592 3.25 10.2917C3.25 8.4241 3.99189 6.63303 5.31246 5.31246C6.63303 3.99189 8.4241 3.25 10.2917 3.25ZM10.2917 5.41667C7.58333 5.41667 5.41667 7.58333 5.41667 10.2917C5.41667 13 7.58333 15.1667 10.2917 15.1667C13 15.1667 15.1667 13 15.1667 10.2917C15.1667 7.58333 13 5.41667 10.2917 5.41667Z" fill="currentColor" />
+</svg>
+</button>
+</form>
+</div>
+</div>
+<a href="connect-wallet.html" class="za yc ld pd vd sf wf eh nh vh gi ji ki wi yi kl jm">
+<span class="ig">
+<svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.125 17.75V18.7083C20.125 19.2167 19.9231 19.7042 19.5636 20.0636C19.2042 20.4231 18.7167 20.625 18.2083 20.625H4.79167C3.72792 20.625 2.875 19.7625 2.875 18.7083V5.29167C2.875 4.78333 3.07693 4.29582 3.43638 3.93638C3.79582 3.57693 4.28334 3.375 4.79167 3.375H18.2083C18.7167 3.375 19.2042 3.57693 19.5636 3.93638C19.9231 4.29582 20.125 4.78333 20.125 5.29167V6.25H11.5C10.4363 6.25 9.58333 7.1125 9.58333 8.16667V15.8333C9.58333 16.3417 9.78527 16.8292 10.1447 17.1886C10.5042 17.5481 10.9917 17.75 11.5 17.75H20.125ZM11.5 15.8333H21.0833V8.16667H11.5V15.8333ZM15.3333 13.4375C14.9521 13.4375 14.5865 13.286 14.3169 13.0165C14.0473 12.7469 13.8958 12.3812 13.8958 12C13.8958 11.6188 14.0473 11.2531 14.3169 10.9835C14.5865 10.714 14.9521 10.5625 15.3333 10.5625C15.7146 10.5625 16.0802 10.714 16.3498 10.9835C16.6194 11.2531 16.7708 11.6188 16.7708 12C16.7708 12.3812 16.6194 12.7469 16.3498 13.0165C16.0802 13.286 15.7146 13.4375 15.3333 13.4375Z" fill="white" />
+</svg>
+</span>
+Wallet Connect
+</a>
+</div>
+</div>
+</div>
+</div>
+</header>
+
+
+<section class="jg kg">
+<div class="a">
+<div class="kd pd wd fe pf xf">
+<ul class="za yc">
+<li class="za yc eh oh vh">
+<a href="/index.html" class="vh cj">
+Home
+</a>
+<span class="qf"> / </span>
+</li>
+<li class="za yc eh oh vh">
+Connect Wallet
+</li>
+</ul>
+</div>
+</div>
+</section>
+
+
+<section id="features" class="lg">
+<div class="a">
+<div class="da ha dc ch">
+<h2 class="ia gh ph qh vh ck">
+Connect Your Wallet
+</h2>
+<p class="hh oh uh">
+Securely manage your crypto assets by connecting your wallet instantly.
+</p>
+</div>
+<div class="ea za xc">
+<div class="pb nf hk/2 _k/3 2xl:ud-w-1/4">
+<a href="/src/index.html"> 
+<div class="ij ja nd qd wd fe ef ii xi zi">
+<div class="ka za db tb yc _c od ge">
+<img src="data:image/png;base64,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" alt="metamask" />
+</div>
+<a href="/src/index.html">
+<h3 class="la ih ph vh gi mj">
+Meta Mask
+</h3>
+<p class="eh oh uh">
+Connect your wallet with MetaMask.
+</p>
+</a>
+</div>
+</div>
+</a>
+<div class="pb nf hk/2 _k/3 2xl:ud-w-1/4">
+<div class="ij ja nd qd wd fe ef ii xi zi">
+<div class="ka za db tb yc _c od ge">
+<img src="data:image/png;base64,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" alt="bitski" />
+</div>
+<h3 class="la ih ph vh gi mj">
+Bitski
+</h3>
+<p class="eh oh uh">
+Connect your wallet with Bitski Wallet
+</p>
+</div>
+</div>
+<div class="pb nf hk/2 _k/3 2xl:ud-w-1/4">
+<div class="ij ja nd qd wd fe ef ii xi zi">
+<div class="ka za db tb yc _c od ge">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1BSDh2e-AAEnrBa036fjnK5jDB-4rwhYXjg&s" alt="Fortmatic" />
+</div>
+<h3 class="la ih ph vh gi mj">
+Fortmatic
+</h3>
+<p class="eh oh uh">
+Connect your wallet with Fortmatic
+</p>
+</div>
+</div>
+<div class="pb nf hk/2 _k/3 2xl:ud-w-1/4">
+<div class="ij ja nd qd wd fe ef ii xi zi">
+<div class="ka za db tb yc _c od ge">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAb1BMVEX///87mfw2l/wulfxBnfz6/f9Gn/zx+P/q9P+21/6o0P3V6P6Fvf31+v/7/v/a6/5ssf07m/yQw/3G4P7P5f7l8v+q0f19uf1SpfxNovxcqfxVpvzh7/6y1f6Yx/3D3v6hzP5ws/2DvP292v6Xxv0q46R6AAAGgElEQVR4nO2c65KiMBBGNXG8IToK3nBUXH3/Z1xQGbmlE5JAmKrv/NzaoXJMd+hOooMBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAECDpb/1gus5ji+PSxzv7kH4M1m6HpQt/NU9/heNR0OeZ7geH26Pczj5cj0+MyZevD+sGWcJwyLJP7BEdPy9uU5dD1OX6Wx/TOSGZbeSKOej73j190J2OrutOelWtIzileshN+ErXIx5JS5pSz68zSauB66IP4uY6vQVZ/J4+QspOZmPNfTe8OHix7WAhNRPV+85kZwv+pyQy9nByO81j+tNb2PVi/TjszCPo51rlVomCyt+L8fIc61T5ToyD9C846Zn5Zy/sOmXwk+9WnG8o23B9P0Yu9b6sLOWgQVFvu9JkePbW2JK8KgXkTr9th+hGWwUuNYbDFYtpGAOfnYtGI5bitA3jMduBYOWBVPFi1PBtaoge/a5H6rbGkL4w53gVdEuaRfXp+9FfL6GnueFwWy+uUVj5SaSb1ztcVzXSuNj41scbP3SH39Nvd3iNFSydKUYyAWTwDxuQvF721/No6HCWsw3HXr9Eko/fcbX/0Lpc7bxUT6RfN6BUYllJBkW46e5YtUV3KTrzrH7Am47ogfFT7MG/Y+3p+eRrbvfv5mShnx0btjfeRGZjw7mcLAXj4gxnf71TmxiucjDwUT4oevuQUw2wic6WUsHU4Eiv2hvQFzrp9GRoEDRrOGpbcXc1TR1ivx7a/TI5aOyqLqsS6uKFjYedn0J0RclRSt7gPdCw+J8W7GgyB9WEibIvWodz2BKTtFarxr+zmIPBHOKFleEbBZ7IfiraHXJe20e9ETwXd1Y3k5JApX1RjBRPHHr+0XhmPVHMFHcXe0/06x0AGUms7mVM8tlOL9b6fSm553VM41gxDlfmL/O/X3ynKOFz+q+Th5kcfEOntsofG/6nOWzc2Br409/xu2+LYN3uc/3ZiWi/26N2NpwFs/cbkHw2dk2U/R/ez82km8yEpyZ3aIuv3VvEqh+rrllI4NZPA/tFuZBoSHVV1wWuneDXJzxYnOl+5yMa6nj1g1Uv7Q9oZ2L59IegOkWR/XwRU+xLKgdqOfKhVwzxbrTJZ1ArQpqKp5rtv9NAjWo+j0Vm35odYJairPavX99RdH5YNNAndzqN1YbvzTqBfUD9Ud4MtFsFkWCieK4keJMeELF9S4zXohjhAa5+EXct2GjBi+Nu/h4ih3KR8xK7InDJfVAnZAXihoEqihEn48Za126jamh8X9qiuIQzcamqCgO0fQpkdZbenskTwiVAtWXCCqvqLQgv+sIDgYr+hBUYbmhcvCjqJCLRA6mgtqni+LV9KUoC43692BVUTqLVA4mggZ331bkpS7ZLKoJKihKQtTo3rssUKm/XSpfy5R0Gm0KmgSqSg5+FIlZbC9EzRRVQ/Q9UHGg1hXbNgV1c7GZIKFYbZcKgla+e6KTi+o5+DvY+lyU5KClSyjNA7XpDL4Ua6obSQ5a+/aQLFDLirJSTTDgao0qCVGL14g8iWLxf8tLNZFiKRcli4zVe1JNlhudEK1VlISo5Ytg6oEq7SZIxVygdpWDGZ6k08gUaUF2CsjvgOWaKXoVZS1c5VPLRTpE2eFn8EUrZoHaVjdBoRKoko7+8DzXVVHsNgfVFSUhenzvNUgUw65e9FVkgerRgofsZH4pycWgu/dgGbqAo78Hw46fqwe0Iv2gVgVlBRw56mNhO0z7W7VWugkKOheVBbUVW3gP2lGsCGoqdiCoF6g1gnqKXQjqKLJD7ZZ0Y8XWczCjaaB+XhNmii2vogXFRrOYlmr10AWcQ8Fms8hOxBW8BoqdLDIf1BWFIfpCWbHTGUyhm6ncwE70l85UA7WVdomGrlFVBVUVO5/BFJVAJXMwQ0Gx4xzMkAeqeBXNIynDh05C9IUsUNUE5YHqJERf0IEqWUXz0P2iO0FasbYWFUEoOhWkFPMNrwJCRceC4gKu0QymCBSdC4o6jcaCAkVHr4kidYGqIVir2AvBOsUGq2iO6nuxJ4LVXNSawZSSYm8Ey7ko6OhVKCj2SLAYqHoh+ian2INVNM9HUbVUq+dTwPVM8KOo1E0QZMtN7wQzRaMQffH8Bb8eCiadxoFzHpn/jMzXJv3J9h4Kpl8JfNj5verw8rd+3BsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAbvkPwZxWQeiM3jIAAAAASUVORK5CYII=" alt="Wallet Connect" />
+</div>
+<h3 class="la ih ph vh gi mj">
+Wallet Connect
+</h3>
+<p class="eh oh uh">
+  Connect your wallet with coinbase Wallet
+</p>
+</div>
+</div>
+<div class="pb nf hk/2 _k/3 2xl:ud-w-1/4">
+<div class="ij ja nd qd wd fe ef ii xi zi">
+<div class="ka za db tb yc _c od ge">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1-sFfcENrk-q64pcFO-erTb3t1CS1evCDYQ&s" alt="Coinbase Wallet" />
+</div>
+<h3 class="la ih ph vh gi mj">
+Coinbase Wallet
+</h3>
+<p class="eh oh uh">
+Connect your wallet with coinbase Wallet.
+</p>
+</div>
+</div>
+<div class="pb nf hk/2 _k/3 2xl:ud-w-1/4">
+<div class="ij ja nd qd wd fe ef ii xi zi">
+<div class="ka za db tb yc _c od ge">
+<img src="data:image/png;base64,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" alt="Authereum" />
+</div>
+<h3 class="la ih ph vh gi mj">
+Authereum
+</h3>
+<p class="eh oh uh">
+Connect your wallet with Autherum
+</p>
+</div>
+</div>
+<div class="pb nf hk/2 _k/3 2xl:ud-w-1/4">
+<div class="ij ja nd qd wd fe ef ii xi zi">
+<div class="ka za db tb yc _c od ge">
+<img src="https://image.shutterstock.com/image-photo/image-260nw-2008033793.jpg" alt="Kaikas" />
+</div>
+<h3 class="la ih ph vh gi mj">
+Kaikas
+</h3>
+<p class="eh oh uh">
+  Connect your wallet with Kaikas
+</p>
+</div>
+</div>
+<div class="pb nf hk/2 _k/3 2xl:ud-w-1/4">
+<div class="ij ja nd qd wd fe ef ii xi zi">
+<div class="ka za db tb yc _c od ge">
+<img src="data:image/jpeg;base64,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" alt="Torus" />
+</div>
+<h3 class="la ih ph vh gi mj">
+Torus
+</h3>
+<p class="eh oh uh">
+  Connect your wallet with Torus Wallet
+</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<footer class="fe mg">
+<div class="a">
+<div class="ea za xc">
+<div class="pb nf rj/12 al/12 dm/12">
+<div class="ma">
+<div class="ec">
+<a href="/index.html" class="na ya">
+<img src="ChainCred logo.png" alt="logo" class="bb" />
+</a>
+<p class="oa eh oh uh">
+Chaincred empowers secure, transparent peer-to-peer lending using blockchain technology. We eliminate intermediaries, ensuring trust and efficiency in every transaction, giving you full control over your financial freedom.
+</p>
+<div class="za yc">
+<a href="javascript:void(0)" name="social-link" aria-label="social-link" class="pa vh cj">
+<svg width="24" height="24" viewBox="0 0 24 24" class="_e">
+<path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5878 18.0622 20.3855 19.6099 18.5701C21.1576 16.7546 22.0054 14.4456 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
+</svg>
+</a>
+<a href="javascript:void(0)" name="social-link" aria-label="social-link" class="pa vh cj">
+<svg width="24" height="24" viewBox="0 0 24 24" class="_e">
+<path d="M22.46 6C21.69 6.35 20.86 6.58 20 6.69C20.88 6.16 21.56 5.32 21.88 4.31C21.05 4.81 20.13 5.16 19.16 5.36C18.37 4.5 17.26 4 16 4C13.65 4 11.73 5.92 11.73 8.29C11.73 8.63 11.77 8.96 11.84 9.27C8.27998 9.09 5.10998 7.38 2.99998 4.79C2.62998 5.42 2.41998 6.16 2.41998 6.94C2.41998 8.43 3.16998 9.75 4.32998 10.5C3.61998 10.5 2.95998 10.3 2.37998 10C2.37998 10 2.37998 10 2.37998 10.03C2.37998 12.11 3.85998 13.85 5.81998 14.24C5.45998 14.34 5.07998 14.39 4.68998 14.39C4.41998 14.39 4.14998 14.36 3.88998 14.31C4.42998 16 5.99998 17.26 7.88998 17.29C6.42998 18.45 4.57998 19.13 2.55998 19.13C2.21998 19.13 1.87998 19.11 1.53998 19.07C3.43998 20.29 5.69998 21 8.11998 21C16 21 20.33 14.46 20.33 8.79C20.33 8.6 20.33 8.42 20.32 8.23C21.16 7.63 21.88 6.87 22.46 6Z" />
+</svg>
+</a>
+<a href="javascript:void(0)" name="social-link" aria-label="social-link" class="pa vh cj">
+<svg width="24" height="24" viewBox="0 0 24 24" class="_e">
+<path d="M19 3C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19ZM18.5 18.5V13.2C18.5 12.3354 18.1565 11.5062 17.5452 10.8948C16.9338 10.2835 16.1046 9.94 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17C14.6813 12.17 15.0374 12.3175 15.2999 12.5801C15.5625 12.8426 15.71 13.1987 15.71 13.57V18.5H18.5ZM6.88 8.56C7.32556 8.56 7.75288 8.383 8.06794 8.06794C8.383 7.75288 8.56 7.32556 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19C6.43178 5.19 6.00193 5.36805 5.68499 5.68499C5.36805 6.00193 5.19 6.43178 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56ZM8.27 18.5V10.13H5.5V18.5H8.27Z" />
+</svg>
+</a>
+<a href="javascript:void(0)" name="social-link" aria-label="social-link" class="pa vh cj">
+<svg width="24" height="24" viewBox="0 0 24 24" class="_e">
+<path d="M10 15L15.19 12L10 9V15ZM21.56 7.17C21.69 7.64 21.78 8.27 21.84 9.07C21.91 9.87 21.94 10.56 21.94 11.16L22 12C22 14.19 21.84 15.8 21.56 16.83C21.31 17.73 20.73 18.31 19.83 18.56C19.36 18.69 18.5 18.78 17.18 18.84C15.88 18.91 14.69 18.94 13.59 18.94L12 19C7.81 19 5.2 18.84 4.17 18.56C3.27 18.31 2.69 17.73 2.44 16.83C2.31 16.36 2.22 15.73 2.16 14.93C2.09 14.13 2.06 13.44 2.06 12.84L2 12C2 9.81 2.16 8.2 2.44 7.17C2.69 6.27 3.27 5.69 4.17 5.44C4.64 5.31 5.5 5.22 6.82 5.16C8.12 5.09 9.31 5.06 10.41 5.06L12 5C16.19 5 18.8 5.16 19.83 5.44C20.73 5.69 21.31 6.27 21.56 7.17Z" />
+</svg>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="pb nf rj/12 al/12 em/12">
+<div class="ma">
+<h2 class="qa jh ph vh">
+Company
+</h2>
+<ul>
+<li>
+<a href="javascript:void(0)" class="ia ya eh oh uh gi bj">
+About company
+</a>
+</li>
+<li>
+<a href="javascript:void(0)" class="ia ya eh oh uh gi bj">
+Company services
+</a>
+</li>
+<li>
+<a href="javascript:void(0)" class="ia ya eh oh uh gi bj">
+Job opportunities
+</a>
+</li>
+<li>
+<a href="javascript:void(0)" class="ia ya eh oh uh gi bj">
+Contact us
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="pb nf rj/12 al/12 fm/12">
+<div class="ma">
+<h2 class="qa jh ph vh">
+Customer
+</h2>
+<ul>
+<li>
+<a href="javascript:void(0)" class="ia ya eh oh uh gi bj">
+Client support
+</a>
+</li>
+<li>
+<a href="javascript:void(0)" class="ia ya eh oh uh gi bj">
+Latest news
+</a>
+</li>
+<li>
+<a href="javascript:void(0)" class="ia ya eh oh uh gi bj">
+Company Details
+</a>
+</li>
+<li>
+<a href="javascript:void(0)" class="ia ya eh oh uh gi bj">
+Who we are
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="pb nf rj/12 al/12 em/12">
+<div class="ma">
+<h2 class="qa jh ph vh">
+Subscribe Now
+</h2>
+<p class="ka eh oh uh">
+Enter your email address for receiving valuable newsletters.
+</p>
+<form class="f">
+<input type="email" placeholder="Enter your email address" class="eb pb kd qd wd ce ng og fh oh vh di ej" />
+<button type="submit" name="submit" aria-label="submit" class="e p j/2 za fb ub oc/2 yc _c ld he vh">
+<svg width="20" height="20" viewBox="0 0 20 20" class="_e">
+<path d="M1.66669 17.5L19.1667 10L1.66669 2.5V8.33333L14.1667 10L1.66669 11.6667V17.5Z" />
+</svg>
+</button>
+</form>
+</div>
+</div>
+</div>
+<div class="rd wd">
+<div class="yf ch">
+<p class="eh oh uh">
+&copy; Copyright 2025 - ChainCred, All rights reserved.
+</p>
+</div>
+</div>
+</div>
+</footer>
+
+<script defer src="bundle.js"></script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8bfb2a3bc83e077d',t:'MTcyNTc1ODkzOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8bfb2a3bc83e077d","version":"2024.8.0","r":1,"token":"9a6015d415bb4773a0bff22543062d3b","serverTiming":{"name":{"cfL4":true}}}' crossorigin="anonymous"></script>
+</body>
+</html>
