@@ -17,7 +17,8 @@ To get started with ChainCred, clone the repository:
 bash
 git clone https://github.com/yourusername/chaincred.git
 cd chaincred
-Dependencies
+
+##Dependencies
 Make sure you have the following installed:
 
 Node.js (for backend development)
@@ -26,23 +27,22 @@ Web3.js or Ethers.js (for blockchain interactions)
 Smart Contract Platform (such as Ethereum)
 Install the required packages:
 npm install
-Usage
-Clone the repository:
-Use git clone to download the ChainCred repository onto your local machine.
 
-Run the frontend:
+##Usage
+#1. Clone the repository:
+Use git clone to download the ChainCred repository onto your local machine.
+#2.Run the frontend:
 Navigate to the project folder and start the local development server using the following commands:
 npm run start
-Deploy Smart Contracts:
+#3.Deploy Smart Contracts:
 Deploy the smart contracts using the preferred blockchain (Ethereum, Polygon, etc.) network. Make sure to configure your blockchain provider in the smart contract config file.
-
-Explore the Features:
+#4.Explore the Features:
 
 Lend or borrow funds through the platform using cryptocurrency.
 Check loan statuses and manage repayments via the user dashboard.
 Experience trustless, decentralized financial transactions.
 
-Project Structure
+##Project Structure
 chaincred/
 │
 ├── index.html           # The main HTML structure of the platform
@@ -53,9 +53,9 @@ chaincred/
 ├── README.md            # This README file
 └── package.json         # Project dependencies and scripts
 
-Contributing
+##Contributing
 We welcome contributions to ChainCred! Please feel free to submit issues, feature requests, or pull requests. Before contributing, please make sure to:
 
-Fork the repository.
-Create a new branch for your feature or fix.
-Submit a pull request with a clear description of your changes.
+1. Fork the repository.
+2. Create a new branch for your feature or fix.
+3. Submit a pull request with a clear description of your changes.
